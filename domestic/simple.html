@@ -1,0 +1,66 @@
+<html>
+<head>
+	<script src="jquery.min.js"></script>
+	<script src="qrcode.min.js"></script>
+</head>
+
+<body style="margin-left:200px; margin-right:200px;text-align:center;">
+
+<style type="text/css">
+	.myclass {
+		font-size:40px;
+	}
+</style>
+
+<div id="target_div1"></div>
+<div class="target_div2"></div>
+
+<input type="text" id="txt1" class="myclass" />
+<button id="btn1">Test Button</button>
+
+
+
+<div id="qrcode"></div>
+
+
+
+<table style="padding-top:40px;">
+	<tr>
+		<th>Page Title</th>
+		<th>QR Code</th>
+	</tr>
+	<tr>
+		<td>
+			Homepage
+		</td>
+		<td id="qr_homepage">
+		</td>
+	</tr>
+	<tr>
+		<td style="padding-top:40px;">
+			Login page
+		</td>
+		<td id="qr_login_page" style="padding-top:40px;">
+		</td>
+	</tr>
+</table>
+
+<input type="text" id="txt_ISD_code" name="txt_ISD_code" class="myclass" readonly/>
+
+
+<select id="select_country" name="select_country">
+  <option value=""></option>
+  <option value="001">US</option>
+  <option value="0091">India</option>
+  <option value="0044">UK</option>
+  <option value="0061">Australia</option>
+  <option value="0084">Vietnam</option>
+</select>
+
+
+
+<script src="myscript.js"></script>
+
+
+</body>
+</html>

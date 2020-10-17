@@ -1,0 +1,111 @@
+<html>
+<head><title>Contact From</title>
+<script>
+function validateform()
+{
+var a=document.forms["Ruthvik"]["Name:"].value;
+var b=document.forms["Ruthvik"]["Surname:"].value;
+var c=document.forms["Ruthvik"]["Gender:"].value;
+var d=document.forms["Ruthvik"]["Age:"].value;
+var e=document.forms["Ruthvik"]["Telephone:"].value;
+var f=document.forms["Ruthvik"]["Address:"].value;
+var g=document.forms["Ruthvik"]["Postcode:"].value;
+var i=document.forms["Ruthvik"]["Email:"].value;
+<!-- alerts are used for validations-->
+if(a=="")
+{ alert("Name must be filled.");
+return false;
+}
+if(b=="")
+{ alert("Surname must be filled.");
+return false;
+}
+if(d<18 || d>100)
+{ alert("Age is mandatory and it should be in between 18 to 100.");
+return false;
+}
+if(e=="" || e.length>10 || e.length<10)
+{ alert("Telephone number is mandatory and should have 10 digits.");
+return false;
+}
+if(f=="")
+{ alert("Address must be filled.");
+return false;
+}
+if(g=="" || g.length>6)
+{ alert("Postcode is mandatory and should be less than 6 numbers.");
+return false;
+}
+if(i=="")
+{ alert("Email is mandatory.");
+return false;
+}
+}
+</script>
+
+<style>
+body{background-color:#fffaf0;}
+h1{color:b22222;}
+p{color:red;}
+p1{color:blue;}
+p2{color:blue;}
+p3{color:blue;}
+table{background-color:white;
+color:red;}
+</style>
+</head>
+<body>
+<h1>HELP?</h1>
+<p>If you want any help then please contact us</p>
+<p1>Email id:- "Greenvideocom@gmail.com"</p1><br><br>
+<p2>Phone number:- "9876543211"</p2><br><br>
+<p3>Address:- "H.no- 34-56, Street.no-9, Blaciton Colony, Mebourne, Australia.</p3>
+
+<!-- align attribute is used for placing the text at different positions-->
+<h1><u>Customer Information</u></h1>
+<!-- action attribute is used for connecting the pages-->
+<form name="Ruthvik" method="post" action="mailto:ruthvik.1202@gmail.com" enctype="text/plain" onsubmit="return validateform();">
+<!-- table tag is used for creating the table-->
+<table>
+<!-- hr tag is used for a horizonatal line in the page-->
+<!-- tr tag is for creating a row in the table-->
+<tr>
+<td>
+<!-- td tag is for creating a coloumn in the table-->
+<!-- b tag is for changing the text into bold-->
+<b>Name:</b> 
+<td> <input type="text" name="Name:" size="20">
+<tr> 
+<td><b>Surname:</b>
+<td> <input type="text" name="Surname:" size="10">
+<tr>
+<td><b>Gender:</b>
+<td> <input type="radio" name="Gender:" value="Male">Male<br>
+<input type="radio" name="Gender:" value="Female">Female
+<tr>
+<td><b>Age:</b>
+<td> <input type="number" name="Age:" size="20">
+<tr>
+<td><b>Telephone:</b>
+<td> <input type="number" name="Telephone:" size="10">
+<tr>
+<td><b>Address:</b>
+<td> <input type="text" name="Address:" size="40">
+<tr>
+<td><b>Postcode:</b>
+<td> <input type="number" name="Postcode:" size="20">
+<tr>
+<td><b>Email:</b>
+<td> <input type="email" name="Email:" size="20">
+<tr>
+<td> <input type="reset" value="clear">      
+<td><input type="submit" value="submit">
+</table>
+</form>
+</body>
+</html>
+
+
+
+</body>
+</html>
